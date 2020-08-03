@@ -1,22 +1,22 @@
-﻿using Ketum.Localization;
+﻿using ketum.Localization;
 using Volo.Abp.Authorization.Permissions;
 using Volo.Abp.Localization;
 
-namespace Ketum.Permissions
+namespace ketum.Permissions
 {
-    public class KetumPermissionDefinitionProvider : PermissionDefinitionProvider
+    public class ketumPermissionDefinitionProvider : PermissionDefinitionProvider
     {
         public override void Define(IPermissionDefinitionContext context)
         {
-            var myGroup = context.AddGroup(KetumPermissions.GroupName);
+            var myGroup = context.AddGroup(ketumPermissions.GroupName);
 
             //Define your own permissions here. Example:
-            //myGroup.AddPermission(KetumPermissions.MyPermission1, L("Permission:MyPermission1"));
+            //myGroup.AddPermission(ketumPermissions.MyPermission1, L("Permission:MyPermission1"));
         }
 
         private static LocalizableString L(string name)
         {
-            return LocalizableString.Create<KetumResource>(name);
+            return LocalizableString.Create<ketumResource>(name);
         }
     }
 }

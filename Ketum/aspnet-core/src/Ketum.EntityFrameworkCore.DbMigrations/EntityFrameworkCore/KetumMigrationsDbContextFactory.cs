@@ -3,22 +3,22 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
 
-namespace Ketum.EntityFrameworkCore
+namespace ketum.EntityFrameworkCore
 {
     /* This class is needed for EF Core console commands
      * (like Add-Migration and Update-Database commands) */
-    public class KetumMigrationsDbContextFactory : IDesignTimeDbContextFactory<KetumMigrationsDbContext>
+    public class ketumMigrationsDbContextFactory : IDesignTimeDbContextFactory<ketumMigrationsDbContext>
     {
-        public KetumMigrationsDbContext CreateDbContext(string[] args)
+        public ketumMigrationsDbContext CreateDbContext(string[] args)
         {
-            KetumEfCoreEntityExtensionMappings.Configure();
+            ketumEfCoreEntityExtensionMappings.Configure();
 
             var configuration = BuildConfiguration();
 
-            var builder = new DbContextOptionsBuilder<KetumMigrationsDbContext>()
+            var builder = new DbContextOptionsBuilder<ketumMigrationsDbContext>()
                 .UseSqlServer(configuration.GetConnectionString("Default"));
 
-            return new KetumMigrationsDbContext(builder.Options);
+            return new ketumMigrationsDbContext(builder.Options);
         }
 
         private static IConfigurationRoot BuildConfiguration()

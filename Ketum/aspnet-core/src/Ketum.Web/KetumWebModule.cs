@@ -7,10 +7,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Ketum.EntityFrameworkCore;
-using Ketum.Localization;
-using Ketum.MultiTenancy;
-using Ketum.Web.Menus;
+using ketum.EntityFrameworkCore;
+using ketum.Localization;
+using ketum.MultiTenancy;
+using ketum.Web.Menus;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.Swagger;
 using Volo.Abp;
@@ -37,12 +37,12 @@ using Volo.Abp.UI;
 using Volo.Abp.UI.Navigation;
 using Volo.Abp.VirtualFileSystem;
 
-namespace Ketum.Web
+namespace ketum.Web
 {
     [DependsOn(
-        typeof(KetumHttpApiModule),
-        typeof(KetumApplicationModule),
-        typeof(KetumEntityFrameworkCoreDbMigrationsModule),
+        typeof(ketumHttpApiModule),
+        typeof(ketumApplicationModule),
+        typeof(ketumEntityFrameworkCoreDbMigrationsModule),
         typeof(AbpAutofacModule),
         typeof(AbpIdentityWebModule),
         typeof(AbpAccountWebIdentityServerModule),
@@ -51,19 +51,19 @@ namespace Ketum.Web
         typeof(AbpTenantManagementWebModule),
         typeof(AbpAspNetCoreSerilogModule)
         )]
-    public class KetumWebModule : AbpModule
+    public class ketumWebModule : AbpModule
     {
         public override void PreConfigureServices(ServiceConfigurationContext context)
         {
             context.Services.PreConfigure<AbpMvcDataAnnotationsLocalizationOptions>(options =>
             {
                 options.AddAssemblyResource(
-                    typeof(KetumResource),
-                    typeof(KetumDomainModule).Assembly,
-                    typeof(KetumDomainSharedModule).Assembly,
-                    typeof(KetumApplicationModule).Assembly,
-                    typeof(KetumApplicationContractsModule).Assembly,
-                    typeof(KetumWebModule).Assembly
+                    typeof(ketumResource),
+                    typeof(ketumDomainModule).Assembly,
+                    typeof(ketumDomainSharedModule).Assembly,
+                    typeof(ketumApplicationModule).Assembly,
+                    typeof(ketumApplicationContractsModule).Assembly,
+                    typeof(ketumWebModule).Assembly
                 );
             });
         }
@@ -98,7 +98,7 @@ namespace Ketum.Web
                 {
                     options.Authority = configuration["AuthServer:Authority"];
                     options.RequireHttpsMetadata = false;
-                    options.ApiName = "Ketum";
+                    options.ApiName = "ketum";
                 });
         }
 
@@ -106,7 +106,7 @@ namespace Ketum.Web
         {
             Configure<AbpAutoMapperOptions>(options =>
             {
-                options.AddMaps<KetumWebModule>();
+                options.AddMaps<ketumWebModule>();
 
             });
         }
@@ -117,11 +117,11 @@ namespace Ketum.Web
             {
                 Configure<AbpVirtualFileSystemOptions>(options =>
                 {
-                    options.FileSets.ReplaceEmbeddedByPhysical<KetumDomainSharedModule>(Path.Combine(hostingEnvironment.ContentRootPath, $"..{Path.DirectorySeparatorChar}Ketum.Domain.Shared"));
-                    options.FileSets.ReplaceEmbeddedByPhysical<KetumDomainModule>(Path.Combine(hostingEnvironment.ContentRootPath, $"..{Path.DirectorySeparatorChar}Ketum.Domain"));
-                    options.FileSets.ReplaceEmbeddedByPhysical<KetumApplicationContractsModule>(Path.Combine(hostingEnvironment.ContentRootPath, $"..{Path.DirectorySeparatorChar}Ketum.Application.Contracts"));
-                    options.FileSets.ReplaceEmbeddedByPhysical<KetumApplicationModule>(Path.Combine(hostingEnvironment.ContentRootPath, $"..{Path.DirectorySeparatorChar}Ketum.Application"));
-                    options.FileSets.ReplaceEmbeddedByPhysical<KetumWebModule>(hostingEnvironment.ContentRootPath);
+                    options.FileSets.ReplaceEmbeddedByPhysical<ketumDomainSharedModule>(Path.Combine(hostingEnvironment.ContentRootPath, $"..{Path.DirectorySeparatorChar}ketum.Domain.Shared"));
+                    options.FileSets.ReplaceEmbeddedByPhysical<ketumDomainModule>(Path.Combine(hostingEnvironment.ContentRootPath, $"..{Path.DirectorySeparatorChar}ketum.Domain"));
+                    options.FileSets.ReplaceEmbeddedByPhysical<ketumApplicationContractsModule>(Path.Combine(hostingEnvironment.ContentRootPath, $"..{Path.DirectorySeparatorChar}ketum.Application.Contracts"));
+                    options.FileSets.ReplaceEmbeddedByPhysical<ketumApplicationModule>(Path.Combine(hostingEnvironment.ContentRootPath, $"..{Path.DirectorySeparatorChar}ketum.Application"));
+                    options.FileSets.ReplaceEmbeddedByPhysical<ketumWebModule>(hostingEnvironment.ContentRootPath);
                 });
             }
         }
@@ -131,7 +131,7 @@ namespace Ketum.Web
             Configure<AbpLocalizationOptions>(options =>
             {
                 options.Resources
-                    .Get<KetumResource>()
+                    .Get<ketumResource>()
                     .AddBaseTypes(
                         typeof(AbpUiResource)
                     );
@@ -151,7 +151,7 @@ namespace Ketum.Web
         {
             Configure<AbpNavigationOptions>(options =>
             {
-                options.MenuContributors.Add(new KetumMenuContributor());
+                options.MenuContributors.Add(new ketumMenuContributor());
             });
         }
 
@@ -159,7 +159,7 @@ namespace Ketum.Web
         {
             Configure<AbpAspNetCoreMvcOptions>(options =>
             {
-                options.ConventionalControllers.Create(typeof(KetumApplicationModule).Assembly);
+                options.ConventionalControllers.Create(typeof(ketumApplicationModule).Assembly);
             });
         }
 
@@ -168,7 +168,7 @@ namespace Ketum.Web
             services.AddSwaggerGen(
                 options =>
                 {
-                    options.SwaggerDoc("v1", new OpenApiInfo { Title = "Ketum API", Version = "v1" });
+                    options.SwaggerDoc("v1", new OpenApiInfo { Title = "ketum API", Version = "v1" });
                     options.DocInclusionPredicate((docName, description) => true);
                     options.CustomSchemaIds(type => type.FullName);
                 }
@@ -206,7 +206,7 @@ namespace Ketum.Web
             app.UseSwagger();
             app.UseSwaggerUI(options =>
             {
-                options.SwaggerEndpoint("/swagger/v1/swagger.json", "Ketum API");
+                options.SwaggerEndpoint("/swagger/v1/swagger.json", "ketum API");
             });
             app.UseAuditing();
             app.UseAbpSerilogEnrichers();

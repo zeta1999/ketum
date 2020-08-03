@@ -4,7 +4,7 @@ using Microsoft.Extensions.Hosting;
 using Serilog;
 using Serilog.Events;
 
-namespace Ketum.Web
+namespace ketum.Web
 {
     public class Program
     {

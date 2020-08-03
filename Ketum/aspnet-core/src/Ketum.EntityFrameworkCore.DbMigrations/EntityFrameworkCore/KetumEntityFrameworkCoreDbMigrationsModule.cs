@@ -1,16 +1,16 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.Modularity;
 
-namespace Ketum.EntityFrameworkCore
+namespace ketum.EntityFrameworkCore
 {
     [DependsOn(
-        typeof(KetumEntityFrameworkCoreModule)
+        typeof(ketumEntityFrameworkCoreModule)
         )]
-    public class KetumEntityFrameworkCoreDbMigrationsModule : AbpModule
+    public class ketumEntityFrameworkCoreDbMigrationsModule : AbpModule
     {
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
-            context.Services.AddAbpDbContext<KetumMigrationsDbContext>();
+            context.Services.AddAbpDbContext<ketumMigrationsDbContext>();
         }
     }
 }

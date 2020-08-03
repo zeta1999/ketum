@@ -1,4 +1,4 @@
-﻿namespace Ketum.MultiTenancy
+﻿namespace ketum.MultiTenancy
 {
     public static class MultiTenancyConsts
     {

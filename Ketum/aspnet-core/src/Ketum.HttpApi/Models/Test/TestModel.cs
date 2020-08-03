@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Ketum.Models.Test
+namespace ketum.Models.Test
 {
     public class TestModel
     {

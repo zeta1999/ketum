@@ -4,7 +4,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <RootNamespace>Ketum</RootNamespace>
+    <RootNamespace>ketum</RootNamespace>
     <GenerateEmbeddedFilesManifest>true</GenerateEmbeddedFilesManifest>
   </PropertyGroup>
   
@@ -20,8 +20,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Localization\Ketum\*.json" />
-    <Content Remove="Localization\Ketum\*.json" />
+    <EmbeddedResource Include="Localization\ketum\*.json" />
+    <Content Remove="Localization\ketum\*.json" />
   </ItemGroup>
 
   <ItemGroup>

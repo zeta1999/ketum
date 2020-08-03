@@ -4,13 +4,13 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp;
 
-namespace Ketum.HttpApi.Client.ConsoleTestApp
+namespace ketum.HttpApi.Client.ConsoleTestApp
 {
     public class ConsoleTestAppHostedService : IHostedService
     {
         public async Task StartAsync(CancellationToken cancellationToken)
         {
-            using (var application = AbpApplicationFactory.Create<KetumConsoleApiClientModule>())
+            using (var application = AbpApplicationFactory.Create<ketumConsoleApiClientModule>())
             {
                 application.Initialize();
 

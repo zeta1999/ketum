@@ -8,9 +8,9 @@ using Newtonsoft.Json.Serialization;
 using Shouldly;
 using Volo.Abp.AspNetCore.TestBase;
 
-namespace Ketum
+namespace ketum
 {
-    public abstract class KetumWebTestBase : AbpAspNetCoreIntegratedTestBase<KetumWebTestStartup>
+    public abstract class ketumWebTestBase : AbpAspNetCoreIntegratedTestBase<ketumWebTestStartup>
     {
         protected override IHostBuilder CreateHostBuilder()
         {

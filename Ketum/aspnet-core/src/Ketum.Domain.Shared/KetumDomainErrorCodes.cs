@@ -1,6 +1,6 @@
-﻿namespace Ketum
+﻿namespace ketum
 {
-    public static class KetumDomainErrorCodes
+    public static class ketumDomainErrorCodes
     {
         /* You can add your business exception error codes here, as constants */
     }

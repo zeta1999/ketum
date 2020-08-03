@@ -251,10 +251,10 @@ paket-files/
 .idea/
 *.sln.iml
 
-# Ketum
-src/Ketum.Web/Logs/*
-src/Ketum.Web.Host/Logs/*
-src/Ketum.IdentityServer/Logs/*
-src/Ketum.HttpApi.Host/Logs/*
-src/Ketum.HttpApi.HostWithIds/Logs/*
-src/Ketum.DbMigrator/Logs/*
+# ketum
+src/ketum.Web/Logs/*
+src/ketum.Web.Host/Logs/*
+src/ketum.IdentityServer/Logs/*
+src/ketum.HttpApi.Host/Logs/*
+src/ketum.HttpApi.HostWithIds/Logs/*
+src/ketum.DbMigrator/Logs/*

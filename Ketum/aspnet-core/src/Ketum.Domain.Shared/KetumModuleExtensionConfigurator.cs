@@ -3,9 +3,9 @@ using Volo.Abp.Identity;
 using Volo.Abp.ObjectExtending;
 using Volo.Abp.Threading;
 
-namespace Ketum
+namespace ketum
 {
-    public static class KetumModulePropertyConfigurator
+    public static class ketumModulePropertyConfigurator
     {
         private static readonly OneTimeRunner OneTimeRunner = new OneTimeRunner();
 

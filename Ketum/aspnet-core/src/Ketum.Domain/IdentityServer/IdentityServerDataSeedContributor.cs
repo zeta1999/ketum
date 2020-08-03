@@ -15,7 +15,7 @@ using Volo.Abp.Uow;
 using ApiResource = Volo.Abp.IdentityServer.ApiResources.ApiResource;
 using Client = Volo.Abp.IdentityServer.Clients.Client;
 
-namespace Ketum.IdentityServer
+namespace ketum.IdentityServer
 {
     public class IdentityServerDataSeedContributor : IDataSeedContributor, ITransientDependency
     {
@@ -62,7 +62,7 @@ namespace Ketum.IdentityServer
                 "role"
             };
 
-            await CreateApiResourceAsync("Ketum", commonApiUserClaims);
+            await CreateApiResourceAsync("ketum", commonApiUserClaims);
         }
 
         private async Task<ApiResource> CreateApiResourceAsync(string name, IEnumerable<string> claims)
@@ -101,25 +101,25 @@ namespace Ketum.IdentityServer
                 "role",
                 "phone",
                 "address",
-                "Ketum"
+                "ketum"
             };
 
             var configurationSection = _configuration.GetSection("IdentityServer:Clients");
 
             //Web Client
-            var webClientId = configurationSection["Ketum_Web:ClientId"];
+            var webClientId = configurationSection["ketum_Web:ClientId"];
             if (!webClientId.IsNullOrWhiteSpace())
             {
-                var webClientRootUrl = configurationSection["Ketum_Web:RootUrl"].EnsureEndsWith('/');
+                var webClientRootUrl = configurationSection["ketum_Web:RootUrl"].EnsureEndsWith('/');
 
-                /* Ketum_Web client is only needed if you created a tiered
+                /* ketum_Web client is only needed if you created a tiered
                  * solution. Otherwise, you can delete this client. */
 
                 await CreateClientAsync(
                     name: webClientId,
                     scopes: commonScopes,
                     grantTypes: new[] {"hybrid"},
-                    secret: (configurationSection["Ketum_Web:ClientSecret"] ?? "1q2w3e*").Sha256(),
+                    secret: (configurationSection["ketum_Web:ClientSecret"] ?? "1q2w3e*").Sha256(),
                     redirectUri: $"{webClientRootUrl}signin-oidc",
                     postLogoutRedirectUri: $"{webClientRootUrl}signout-callback-oidc",
                     frontChannelLogoutUri: $"{webClientRootUrl}Account/FrontChannelLogout"
@@ -127,14 +127,14 @@ namespace Ketum.IdentityServer
             }
 
             //Console Test Client
-            var consoleClientId = configurationSection["Ketum_App:ClientId"];
+            var consoleClientId = configurationSection["ketum_App:ClientId"];
             if (!consoleClientId.IsNullOrWhiteSpace())
             {
                 await CreateClientAsync(
                     name: consoleClientId,
                     scopes: commonScopes,
                     grantTypes: new[] {"password", "client_credentials"},
-                    secret: (configurationSection["Ketum_App:ClientSecret"] ?? "1q2w3e*").Sha256()
+                    secret: (configurationSection["ketum_App:ClientSecret"] ?? "1q2w3e*").Sha256()
                 );
             }
         }

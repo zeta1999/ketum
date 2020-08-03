@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Ketum.Users;
+using ketum.Users;
 using Shouldly;
 using System;
 using System.Linq;
@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 using Volo.Abp.Domain.Repositories;
 using Xunit;
 
-namespace Ketum.EntityFrameworkCore.Samples
+namespace ketum.EntityFrameworkCore.Samples
 {
     /* This is just an example test class.
      * Normally, you don't test ABP framework code
      * (like default AppUser repository IRepository<AppUser, Guid> here).
      * Only test your custom repository methods.
      */
-    public class SampleRepositoryTests : KetumEntityFrameworkCoreTestBase
+    public class SampleRepositoryTests : ketumEntityFrameworkCoreTestBase
     {
         private readonly IRepository<AppUser, Guid> _appUserRepository;
 

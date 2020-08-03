@@ -1,11 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Volo.Abp;
 
-namespace Ketum.EntityFrameworkCore
+namespace ketum.EntityFrameworkCore
 {
-    public static class KetumDbContextModelCreatingExtensions
+    public static class ketumDbContextModelCreatingExtensions
     {
-        public static void ConfigureKetum(this ModelBuilder builder)
+        public static void Configureketum(this ModelBuilder builder)
         {
             Check.NotNull(builder, nameof(builder));
 
@@ -13,7 +13,7 @@ namespace Ketum.EntityFrameworkCore
 
             //builder.Entity<YourEntity>(b =>
             //{
-            //    b.ToTable(KetumConsts.DbTablePrefix + "YourEntities", KetumConsts.DbSchema);
+            //    b.ToTable(ketumConsts.DbTablePrefix + "YourEntities", ketumConsts.DbSchema);
             //    b.ConfigureByConvention(); //auto configure for the base class props
             //    //...
             //});

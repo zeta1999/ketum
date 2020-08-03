@@ -3,14 +3,14 @@ using Shouldly;
 using Volo.Abp.Identity;
 using Xunit;
 
-namespace Ketum.Samples
+namespace ketum.Samples
 {
     /* This is just an example test class.
      * Normally, you don't test code of the modules you are using
      * (like IdentityUserManager here).
      * Only test your own domain services.
      */
-    public class SampleDomainTests : KetumDomainTestBase
+    public class SampleDomainTests : ketumDomainTestBase
     {
         private readonly IIdentityUserRepository _identityUserRepository;
         private readonly IdentityUserManager _identityUserManager;

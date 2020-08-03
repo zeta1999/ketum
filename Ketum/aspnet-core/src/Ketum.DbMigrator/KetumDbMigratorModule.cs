@@ -1,16 +1,16 @@
-﻿using Ketum.EntityFrameworkCore;
+﻿using ketum.EntityFrameworkCore;
 using Volo.Abp.Autofac;
 using Volo.Abp.BackgroundJobs;
 using Volo.Abp.Modularity;
 
-namespace Ketum.DbMigrator
+namespace ketum.DbMigrator
 {
     [DependsOn(
         typeof(AbpAutofacModule),
-        typeof(KetumEntityFrameworkCoreDbMigrationsModule),
-        typeof(KetumApplicationContractsModule)
+        typeof(ketumEntityFrameworkCoreDbMigrationsModule),
+        typeof(ketumApplicationContractsModule)
         )]
-    public class KetumDbMigratorModule : AbpModule
+    public class ketumDbMigratorModule : AbpModule
     {
         public override void ConfigureServices(ServiceConfigurationContext context)
         {

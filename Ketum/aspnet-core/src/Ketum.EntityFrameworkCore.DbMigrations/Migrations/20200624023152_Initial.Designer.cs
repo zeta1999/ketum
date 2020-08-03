@@ -5,12 +5,12 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Ketum.EntityFrameworkCore;
+using ketum.EntityFrameworkCore;
 using Volo.Abp.EntityFrameworkCore;
 
-namespace Ketum.Migrations
+namespace ketum.Migrations
 {
-    [DbContext(typeof(KetumMigrationsDbContext))]
+    [DbContext(typeof(ketumMigrationsDbContext))]
     [Migration("20200624023152_Initial")]
     partial class Initial
     {

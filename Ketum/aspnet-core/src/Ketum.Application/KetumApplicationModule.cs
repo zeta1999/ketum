@@ -6,24 +6,24 @@ using Volo.Abp.Modularity;
 using Volo.Abp.PermissionManagement;
 using Volo.Abp.TenantManagement;
 
-namespace Ketum
+namespace ketum
 {
     [DependsOn(
-        typeof(KetumDomainModule),
+        typeof(ketumDomainModule),
         typeof(AbpAccountApplicationModule),
-        typeof(KetumApplicationContractsModule),
+        typeof(ketumApplicationContractsModule),
         typeof(AbpIdentityApplicationModule),
         typeof(AbpPermissionManagementApplicationModule),
         typeof(AbpTenantManagementApplicationModule),
         typeof(AbpFeatureManagementApplicationModule)
         )]
-    public class KetumApplicationModule : AbpModule
+    public class ketumApplicationModule : AbpModule
     {
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
             Configure<AbpAutoMapperOptions>(options =>
             {
-                options.AddMaps<KetumApplicationModule>();
+                options.AddMaps<ketumApplicationModule>();
             });
         }
     }

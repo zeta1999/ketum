@@ -6,7 +6,7 @@ using Microsoft.Extensions.Logging;
 using Serilog;
 using Serilog.Events;
 
-namespace Ketum.DbMigrator
+namespace ketum.DbMigrator
 {
     class Program
     {
@@ -17,9 +17,9 @@ namespace Ketum.DbMigrator
                 .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
                 .MinimumLevel.Override("Volo.Abp", LogEventLevel.Warning)
 #if DEBUG
-                .MinimumLevel.Override("Ketum", LogEventLevel.Debug)
+                .MinimumLevel.Override("ketum", LogEventLevel.Debug)
 #else
-                .MinimumLevel.Override("Ketum", LogEventLevel.Information)
+                .MinimumLevel.Override("ketum", LogEventLevel.Information)
 #endif
                 .Enrich.FromLogContext()
                 .WriteTo.File(Path.Combine(Directory.GetCurrentDirectory(), "Logs/logs.txt"))

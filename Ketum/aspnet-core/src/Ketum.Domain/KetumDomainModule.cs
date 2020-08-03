@@ -1,5 +1,5 @@
-﻿using Ketum.MultiTenancy;
-using Ketum.ObjectExtending;
+﻿using ketum.MultiTenancy;
+using ketum.ObjectExtending;
 using Volo.Abp.AuditLogging;
 using Volo.Abp.BackgroundJobs;
 using Volo.Abp.FeatureManagement;
@@ -12,10 +12,10 @@ using Volo.Abp.PermissionManagement.IdentityServer;
 using Volo.Abp.SettingManagement;
 using Volo.Abp.TenantManagement;
 
-namespace Ketum
+namespace ketum
 {
     [DependsOn(
-        typeof(KetumDomainSharedModule),
+        typeof(ketumDomainSharedModule),
         typeof(AbpAuditLoggingDomainModule),
         typeof(AbpBackgroundJobsDomainModule),
         typeof(AbpFeatureManagementDomainModule),
@@ -26,11 +26,11 @@ namespace Ketum
         typeof(AbpSettingManagementDomainModule),
         typeof(AbpTenantManagementDomainModule)
         )]
-    public class KetumDomainModule : AbpModule
+    public class ketumDomainModule : AbpModule
     {
         public override void PreConfigureServices(ServiceConfigurationContext context)
         {
-            KetumDomainObjectExtensions.Configure();
+            ketumDomainObjectExtensions.Configure();
         }
 
         public override void ConfigureServices(ServiceConfigurationContext context)

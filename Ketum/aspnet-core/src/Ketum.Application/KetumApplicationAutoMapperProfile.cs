@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
 
-namespace Ketum
+namespace ketum
 {
-    public class KetumApplicationAutoMapperProfile : Profile
+    public class ketumApplicationAutoMapperProfile : Profile
     {
-        public KetumApplicationAutoMapperProfile()
+        public ketumApplicationAutoMapperProfile()
         {
             /* You can configure your AutoMapper mapping configuration here.
              * Alternatively, you can split your mapping configurations

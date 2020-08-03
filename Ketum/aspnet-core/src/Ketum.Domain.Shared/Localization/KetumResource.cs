@@ -1,9 +1,9 @@
 ﻿using Volo.Abp.Localization;
 
-namespace Ketum.Localization
+namespace ketum.Localization
 {
-    [LocalizationResourceName("Ketum")]
-    public class KetumResource
+    [LocalizationResourceName("ketum")]
+    public class ketumResource
     {
 
     }

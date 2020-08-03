@@ -2,7 +2,7 @@
 using System.IO;
 using System.Linq;
 
-namespace Ketum
+namespace ketum
 {
     /// <summary>
     /// This class is used to find root path of the web project. Used for;
@@ -13,14 +13,14 @@ namespace Ketum
     {
         public static string CalculateContentRootFolder()
         {
-            var domainAssemblyDirectoryPath = Path.GetDirectoryName(typeof(KetumDomainModule).Assembly.Location);
+            var domainAssemblyDirectoryPath = Path.GetDirectoryName(typeof(ketumDomainModule).Assembly.Location);
             if (domainAssemblyDirectoryPath == null)
             {
-                throw new Exception($"Could not find location of {typeof(KetumDomainModule).Assembly.FullName} assembly!");
+                throw new Exception($"Could not find location of {typeof(ketumDomainModule).Assembly.FullName} assembly!");
             }
 
             var directoryInfo = new DirectoryInfo(domainAssemblyDirectoryPath);
-            while (!DirectoryContains(directoryInfo.FullName, "Ketum.sln"))
+            while (!DirectoryContains(directoryInfo.FullName, "ketum.sln"))
             {
                 if (directoryInfo.Parent == null)
                 {
@@ -30,7 +30,7 @@ namespace Ketum
                 directoryInfo = directoryInfo.Parent;
             }
 
-            var webFolder = Path.Combine(directoryInfo.FullName, $"src{Path.DirectorySeparatorChar}Ketum.Web");
+            var webFolder = Path.Combine(directoryInfo.FullName, $"src{Path.DirectorySeparatorChar}ketum.Web");
             if (Directory.Exists(webFolder))
             {
                 return webFolder;

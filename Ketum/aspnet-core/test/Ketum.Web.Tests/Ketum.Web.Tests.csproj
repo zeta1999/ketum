@@ -6,7 +6,7 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <OutputType>Exe</OutputType>
     <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
-    <RootNamespace>Ketum</RootNamespace>
+    <RootNamespace>ketum</RootNamespace>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
     <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
@@ -15,8 +15,8 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.6.1" />
-    <ProjectReference Include="..\Ketum.Application.Tests\Ketum.Application.Tests.csproj" />
-    <ProjectReference Include="..\..\src\Ketum.Web\Ketum.Web.csproj" />
+    <ProjectReference Include="..\ketum.Application.Tests\ketum.Application.Tests.csproj" />
+    <ProjectReference Include="..\..\src\ketum.Web\ketum.Web.csproj" />
     <PackageReference Include="Volo.Abp.AspNetCore.TestBase" Version="3.0.5" />
   </ItemGroup>
 

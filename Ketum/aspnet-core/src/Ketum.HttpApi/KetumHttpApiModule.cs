@@ -5,17 +5,17 @@ using Volo.Abp.Modularity;
 using Volo.Abp.PermissionManagement.HttpApi;
 using Volo.Abp.TenantManagement;
 
-namespace Ketum
+namespace ketum
 {
     [DependsOn(
-        typeof(KetumApplicationContractsModule),
+        typeof(ketumApplicationContractsModule),
         typeof(AbpAccountHttpApiModule),
         typeof(AbpIdentityHttpApiModule),
         typeof(AbpPermissionManagementHttpApiModule),
         typeof(AbpTenantManagementHttpApiModule),
         typeof(AbpFeatureManagementHttpApiModule)
         )]
-    public class KetumHttpApiModule : AbpModule
+    public class ketumHttpApiModule : AbpModule
     {
         
     }

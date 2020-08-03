@@ -2,9 +2,9 @@
 using Volo.Abp.ObjectExtending;
 using Volo.Abp.Threading;
 
-namespace Ketum.ObjectExtending
+namespace ketum.ObjectExtending
 {
-    public static class KetumDomainObjectExtensions
+    public static class ketumDomainObjectExtensions
     {
         private static readonly OneTimeRunner OneTimeRunner = new OneTimeRunner();
 
@@ -16,7 +16,7 @@ namespace Ketum.ObjectExtending
                  * defined in the depended modules.
                  * 
                  * If you are using EF Core and want to map the entity extension properties to new
-                 * table fields in the database, then configure them in the KetumEfCoreEntityExtensionMappings
+                 * table fields in the database, then configure them in the ketumEfCoreEntityExtensionMappings
                  *
                  * Example:
                  *

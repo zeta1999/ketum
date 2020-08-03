@@ -2,7 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace Ketum.HttpApi.Client.ConsoleTestApp
+namespace ketum.HttpApi.Client.ConsoleTestApp
 {
     class Program
     {

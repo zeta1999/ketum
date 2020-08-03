@@ -1,4 +1,4 @@
-﻿using Ketum.Localization;
+﻿using ketum.Localization;
 using Volo.Abp.AuditLogging;
 using Volo.Abp.BackgroundJobs;
 using Volo.Abp.FeatureManagement;
@@ -12,7 +12,7 @@ using Volo.Abp.TenantManagement;
 using Volo.Abp.Validation.Localization;
 using Volo.Abp.VirtualFileSystem;
 
-namespace Ketum
+namespace ketum
 {
     [DependsOn(
         typeof(AbpAuditLoggingDomainSharedModule),
@@ -24,28 +24,28 @@ namespace Ketum
         typeof(AbpSettingManagementDomainSharedModule),
         typeof(AbpTenantManagementDomainSharedModule)
         )]
-    public class KetumDomainSharedModule : AbpModule
+    public class ketumDomainSharedModule : AbpModule
     {
         public override void PreConfigureServices(ServiceConfigurationContext context)
         {
-            KetumModulePropertyConfigurator.Configure();
+            ketumModulePropertyConfigurator.Configure();
         }
 
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
             Configure<AbpVirtualFileSystemOptions>(options =>
             {
-                options.FileSets.AddEmbedded<KetumDomainSharedModule>();
+                options.FileSets.AddEmbedded<ketumDomainSharedModule>();
             });
 
             Configure<AbpLocalizationOptions>(options =>
             {
                 options.Resources
-                    .Add<KetumResource>("en")
+                    .Add<ketumResource>("en")
                     .AddBaseTypes(typeof(AbpValidationResource))
-                    .AddVirtualJson("/Localization/Ketum");
+                    .AddVirtualJson("/Localization/ketum");
                 
-                options.DefaultResourceType = typeof(KetumResource);
+                options.DefaultResourceType = typeof(ketumResource);
             });
         }
     }

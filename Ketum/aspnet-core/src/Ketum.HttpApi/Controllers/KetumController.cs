@@ -1,15 +1,15 @@
-﻿using Ketum.Localization;
+﻿using ketum.Localization;
 using Volo.Abp.AspNetCore.Mvc;
 
-namespace Ketum.Controllers
+namespace ketum.Controllers
 {
     /* Inherit your controllers from this class.
      */
-    public abstract class KetumController : AbpController
+    public abstract class ketumController : AbpController
     {
-        protected KetumController()
+        protected ketumController()
         {
-            LocalizationResource = typeof(KetumResource);
+            LocalizationResource = typeof(ketumResource);
         }
     }
 }

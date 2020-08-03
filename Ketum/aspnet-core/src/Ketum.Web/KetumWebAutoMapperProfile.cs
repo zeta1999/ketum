@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
 
-namespace Ketum.Web
+namespace ketum.Web
 {
-    public class KetumWebAutoMapperProfile : Profile
+    public class ketumWebAutoMapperProfile : Profile
     {
-        public KetumWebAutoMapperProfile()
+        public ketumWebAutoMapperProfile()
         {
             //Define your AutoMapper configuration here for the Web project.
         }

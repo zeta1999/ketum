@@ -8,14 +8,14 @@ using Volo.Abp.EntityFrameworkCore;
 using Volo.Abp.EntityFrameworkCore.Sqlite;
 using Volo.Abp.Modularity;
 
-namespace Ketum.EntityFrameworkCore
+namespace ketum.EntityFrameworkCore
 {
     [DependsOn(
-        typeof(KetumEntityFrameworkCoreDbMigrationsModule),
-        typeof(KetumTestBaseModule),
+        typeof(ketumEntityFrameworkCoreDbMigrationsModule),
+        typeof(ketumTestBaseModule),
         typeof(AbpEntityFrameworkCoreSqliteModule)
         )]
-    public class KetumEntityFrameworkCoreTestModule : AbpModule
+    public class ketumEntityFrameworkCoreTestModule : AbpModule
     {
         private SqliteConnection _sqliteConnection;
 
@@ -47,11 +47,11 @@ namespace Ketum.EntityFrameworkCore
             var connection = new SqliteConnection("Data Source=:memory:");
             connection.Open();
 
-            var options = new DbContextOptionsBuilder<KetumMigrationsDbContext>()
+            var options = new DbContextOptionsBuilder<ketumMigrationsDbContext>()
                 .UseSqlite(connection)
                 .Options;
 
-            using (var context = new KetumMigrationsDbContext(options))
+            using (var context = new ketumMigrationsDbContext(options))
             {
                 context.GetService<IRelationalDatabaseCreator>().CreateTables();
             }

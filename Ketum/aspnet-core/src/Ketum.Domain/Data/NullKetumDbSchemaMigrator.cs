@@ -1,12 +1,12 @@
 ﻿using System.Threading.Tasks;
 using Volo.Abp.DependencyInjection;
 
-namespace Ketum.Data
+namespace ketum.Data
 {
     /* This is used if database provider does't define
-     * IKetumDbSchemaMigrator implementation.
+     * IketumDbSchemaMigrator implementation.
      */
-    public class NullKetumDbSchemaMigrator : IKetumDbSchemaMigrator, ITransientDependency
+    public class NullketumDbSchemaMigrator : IketumDbSchemaMigrator, ITransientDependency
     {
         public Task MigrateAsync()
         {

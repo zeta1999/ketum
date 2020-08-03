@@ -11,10 +11,10 @@ using Volo.Abp.PermissionManagement.EntityFrameworkCore;
 using Volo.Abp.SettingManagement.EntityFrameworkCore;
 using Volo.Abp.TenantManagement.EntityFrameworkCore;
 
-namespace Ketum.EntityFrameworkCore
+namespace ketum.EntityFrameworkCore
 {
     [DependsOn(
-        typeof(KetumDomainModule),
+        typeof(ketumDomainModule),
         typeof(AbpIdentityEntityFrameworkCoreModule),
         typeof(AbpIdentityServerEntityFrameworkCoreModule),
         typeof(AbpPermissionManagementEntityFrameworkCoreModule),
@@ -25,16 +25,16 @@ namespace Ketum.EntityFrameworkCore
         typeof(AbpTenantManagementEntityFrameworkCoreModule),
         typeof(AbpFeatureManagementEntityFrameworkCoreModule)
         )]
-    public class KetumEntityFrameworkCoreModule : AbpModule
+    public class ketumEntityFrameworkCoreModule : AbpModule
     {
         public override void PreConfigureServices(ServiceConfigurationContext context)
         {
-            KetumEfCoreEntityExtensionMappings.Configure();
+            ketumEfCoreEntityExtensionMappings.Configure();
         }
 
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
-            context.Services.AddAbpDbContext<KetumDbContext>(options =>
+            context.Services.AddAbpDbContext<ketumDbContext>(options =>
             {
                 /* Remove "includeAllEntities: true" to create
                  * default repositories only for aggregate roots */
@@ -44,7 +44,7 @@ namespace Ketum.EntityFrameworkCore
             Configure<AbpDbContextOptions>(options =>
             {
                 /* The main point to change your DBMS.
-                 * See also KetumMigrationsDbContextFactory for EF Core tooling. */
+                 * See also ketumMigrationsDbContextFactory for EF Core tooling. */
                 options.UseSqlServer();
             });
         }

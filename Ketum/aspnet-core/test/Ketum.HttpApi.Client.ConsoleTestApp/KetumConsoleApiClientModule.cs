@@ -1,13 +1,13 @@
 ﻿using Volo.Abp.Http.Client.IdentityModel;
 using Volo.Abp.Modularity;
 
-namespace Ketum.HttpApi.Client.ConsoleTestApp
+namespace ketum.HttpApi.Client.ConsoleTestApp
 {
     [DependsOn(
-        typeof(KetumHttpApiClientModule),
+        typeof(ketumHttpApiClientModule),
         typeof(AbpHttpClientIdentityModelModule)
         )]
-    public class KetumConsoleApiClientModule : AbpModule
+    public class ketumConsoleApiClientModule : AbpModule
     {
         
     }

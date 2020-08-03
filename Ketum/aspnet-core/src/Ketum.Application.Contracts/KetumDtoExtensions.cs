@@ -2,9 +2,9 @@
 using Volo.Abp.ObjectExtending;
 using Volo.Abp.Threading;
 
-namespace Ketum
+namespace ketum
 {
-    public static class KetumDtoExtensions
+    public static class ketumDtoExtensions
     {
         private static readonly OneTimeRunner OneTimeRunner = new OneTimeRunner();
 

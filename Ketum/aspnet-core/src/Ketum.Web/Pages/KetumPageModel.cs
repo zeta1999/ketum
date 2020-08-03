@@ -1,15 +1,15 @@
-﻿using Ketum.Localization;
+﻿using ketum.Localization;
 using Volo.Abp.AspNetCore.Mvc.UI.RazorPages;
 
-namespace Ketum.Web.Pages
+namespace ketum.Web.Pages
 {
     /* Inherit your PageModel classes from this class.
      */
-    public abstract class KetumPageModel : AbpPageModel
+    public abstract class ketumPageModel : AbpPageModel
     {
-        protected KetumPageModel()
+        protected ketumPageModel()
         {
-            LocalizationResourceType = typeof(KetumResource);
+            LocalizationResourceType = typeof(ketumResource);
         }
     }
 }

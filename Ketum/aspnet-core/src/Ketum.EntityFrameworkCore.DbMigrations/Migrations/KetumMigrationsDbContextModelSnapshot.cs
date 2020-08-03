@@ -4,13 +4,13 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Ketum.EntityFrameworkCore;
+using ketum.EntityFrameworkCore;
 using Volo.Abp.EntityFrameworkCore;
 
-namespace Ketum.Migrations
+namespace ketum.Migrations
 {
-    [DbContext(typeof(KetumMigrationsDbContext))]
-    partial class KetumMigrationsDbContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(ketumMigrationsDbContext))]
+    partial class ketumMigrationsDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {

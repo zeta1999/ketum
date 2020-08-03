@@ -4,12 +4,12 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>Ketum</RootNamespace>
+    <RootNamespace>ketum</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Ketum.EntityFrameworkCore.DbMigrations\Ketum.EntityFrameworkCore.DbMigrations.csproj" />
-    <ProjectReference Include="..\Ketum.TestBase\Ketum.TestBase.csproj" />
+    <ProjectReference Include="..\..\src\ketum.EntityFrameworkCore.DbMigrations\ketum.EntityFrameworkCore.DbMigrations.csproj" />
+    <ProjectReference Include="..\ketum.TestBase\ketum.TestBase.csproj" />
     <PackageReference Include="Volo.Abp.EntityFrameworkCore.Sqlite" Version="3.0.5" />
   </ItemGroup>
 

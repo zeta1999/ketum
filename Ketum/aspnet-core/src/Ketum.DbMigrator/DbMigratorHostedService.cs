@@ -2,11 +2,11 @@
 using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Ketum.Data;
+using ketum.Data;
 using Serilog;
 using Volo.Abp;
 
-namespace Ketum.DbMigrator
+namespace ketum.DbMigrator
 {
     public class DbMigratorHostedService : IHostedService
     {
@@ -19,7 +19,7 @@ namespace Ketum.DbMigrator
 
         public async Task StartAsync(CancellationToken cancellationToken)
         {
-            using (var application = AbpApplicationFactory.Create<KetumDbMigratorModule>(options =>
+            using (var application = AbpApplicationFactory.Create<ketumDbMigratorModule>(options =>
             {
                 options.UseAutofac();
                 options.Services.AddLogging(c => c.AddSerilog());
@@ -29,7 +29,7 @@ namespace Ketum.DbMigrator
 
                 await application
                     .ServiceProvider
-                    .GetRequiredService<KetumDbMigrationService>()
+                    .GetRequiredService<ketumDbMigrationService>()
                     .MigrateAsync();
 
                 application.Shutdown();

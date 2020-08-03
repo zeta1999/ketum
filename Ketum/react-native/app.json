@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Ketum",
-    "slug": "Ketum",
+    "name": "ketum",
+    "slug": "ketum",
     "privacy": "public",
     "sdkVersion": "36.0.0",
     "platforms": ["ios", "android", "web"],
@@ -19,11 +19,11 @@
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.Ketum",
+      "bundleIdentifier": "com.ketum",
       "buildNumber": "1.0.0"
     },
     "android": {
-      "package": "com.Ketum",
+      "package": "com.ketum",
       "versionCode": 1
     }
   }

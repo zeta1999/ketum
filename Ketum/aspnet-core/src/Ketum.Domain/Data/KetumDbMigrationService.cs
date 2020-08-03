@@ -8,20 +8,20 @@ using Volo.Abp.DependencyInjection;
 using Volo.Abp.MultiTenancy;
 using Volo.Abp.TenantManagement;
 
-namespace Ketum.Data
+namespace ketum.Data
 {
-    public class KetumDbMigrationService : ITransientDependency
+    public class ketumDbMigrationService : ITransientDependency
     {
-        public ILogger<KetumDbMigrationService> Logger { get; set; }
+        public ILogger<ketumDbMigrationService> Logger { get; set; }
 
         private readonly IDataSeeder _dataSeeder;
-        private readonly IEnumerable<IKetumDbSchemaMigrator> _dbSchemaMigrators;
+        private readonly IEnumerable<IketumDbSchemaMigrator> _dbSchemaMigrators;
         private readonly ITenantRepository _tenantRepository;
         private readonly ICurrentTenant _currentTenant;
 
-        public KetumDbMigrationService(
+        public ketumDbMigrationService(
             IDataSeeder dataSeeder,
-            IEnumerable<IKetumDbSchemaMigrator> dbSchemaMigrators,
+            IEnumerable<IketumDbSchemaMigrator> dbSchemaMigrators,
             ITenantRepository tenantRepository,
             ICurrentTenant currentTenant)
         {
@@ -30,7 +30,7 @@ namespace Ketum.Data
             _tenantRepository = tenantRepository;
             _currentTenant = currentTenant;
 
-            Logger = NullLogger<KetumDbMigrationService>.Instance;
+            Logger = NullLogger<ketumDbMigrationService>.Instance;
         }
 
         public async Task MigrateAsync()

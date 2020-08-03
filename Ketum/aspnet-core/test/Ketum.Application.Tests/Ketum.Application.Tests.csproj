@@ -4,12 +4,12 @@
   
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>Ketum</RootNamespace>
+    <RootNamespace>ketum</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Ketum.Application\Ketum.Application.csproj" />
-    <ProjectReference Include="..\Ketum.Domain.Tests\Ketum.Domain.Tests.csproj" />
+    <ProjectReference Include="..\..\src\ketum.Application\ketum.Application.csproj" />
+    <ProjectReference Include="..\ketum.Domain.Tests\ketum.Domain.Tests.csproj" />
   </ItemGroup>
 
   <ItemGroup>

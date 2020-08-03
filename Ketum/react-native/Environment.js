@@ -1,26 +1,26 @@
 const ENV = {
   dev: {
-    apiUrl: 'http://localhost:44304',
+    apiUrl: 'http://localhost:44321',
     oAuthConfig: {
-      issuer: 'http://localhost:44304',
-      clientId: 'Ketum_App',
+      issuer: 'http://localhost:44321',
+      clientId: 'ketum_App',
       clientSecret: '1q2w3e*',
-      scope: 'Ketum',
+      scope: 'ketum',
     },
     localization: {
-      defaultResourceName: 'Ketum',
+      defaultResourceName: 'ketum',
     },
   },
   prod: {
-    apiUrl: 'http://localhost:44304',
+    apiUrl: 'http://localhost:44321',
     oAuthConfig: {
-      issuer: 'http://localhost:44304',
-      clientId: 'Ketum_App',
+      issuer: 'http://localhost:44321',
+      clientId: 'ketum_App',
       clientSecret: '1q2w3e*',
-      scope: 'Ketum',
+      scope: 'ketum',
     },
     localization: {
-      defaultResourceName: 'Ketum',
+      defaultResourceName: 'ketum',
     },
   },
 };

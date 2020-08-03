@@ -2,9 +2,9 @@
 using Volo.Abp.Data;
 using Volo.Abp.DependencyInjection;
 
-namespace Ketum
+namespace ketum
 {
-    public class KetumTestDataSeedContributor : IDataSeedContributor, ITransientDependency
+    public class ketumTestDataSeedContributor : IDataSeedContributor, ITransientDependency
     {
         public Task SeedAsync(DataSeedContext context)
         {

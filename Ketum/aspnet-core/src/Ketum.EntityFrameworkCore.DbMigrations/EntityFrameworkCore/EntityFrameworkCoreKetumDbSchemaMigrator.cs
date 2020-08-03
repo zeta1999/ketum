@@ -2,17 +2,17 @@
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using Ketum.Data;
+using ketum.Data;
 using Volo.Abp.DependencyInjection;
 
-namespace Ketum.EntityFrameworkCore
+namespace ketum.EntityFrameworkCore
 {
-    public class EntityFrameworkCoreKetumDbSchemaMigrator
-        : IKetumDbSchemaMigrator, ITransientDependency
+    public class EntityFrameworkCoreketumDbSchemaMigrator
+        : IketumDbSchemaMigrator, ITransientDependency
     {
         private readonly IServiceProvider _serviceProvider;
 
-        public EntityFrameworkCoreKetumDbSchemaMigrator(
+        public EntityFrameworkCoreketumDbSchemaMigrator(
             IServiceProvider serviceProvider)
         {
             _serviceProvider = serviceProvider;
@@ -20,14 +20,14 @@ namespace Ketum.EntityFrameworkCore
 
         public async Task MigrateAsync()
         {
-            /* We intentionally resolving the KetumMigrationsDbContext
+            /* We intentionally resolving the ketumMigrationsDbContext
              * from IServiceProvider (instead of directly injecting it)
              * to properly get the connection string of the current tenant in the
              * current scope.
              */
 
             await _serviceProvider
-                .GetRequiredService<KetumMigrationsDbContext>()
+                .GetRequiredService<ketumMigrationsDbContext>()
                 .Database
                 .MigrateAsync();
         }

@@ -4,11 +4,11 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>Ketum</RootNamespace>
+    <RootNamespace>ketum</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Ketum.EntityFrameworkCore.Tests\Ketum.EntityFrameworkCore.Tests.csproj" />
+    <ProjectReference Include="..\ketum.EntityFrameworkCore.Tests\ketum.EntityFrameworkCore.Tests.csproj" />
   </ItemGroup>
 
   <ItemGroup>

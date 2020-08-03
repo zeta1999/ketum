@@ -1,8 +1,8 @@
-﻿namespace Ketum.Permissions
+﻿namespace ketum.Permissions
 {
-    public static class KetumPermissions
+    public static class ketumPermissions
     {
-        public const string GroupName = "Ketum";
+        public const string GroupName = "ketum";
 
         //Add your own permission names. Example:
         //public const string MyPermission1 = GroupName + ".MyPermission1";

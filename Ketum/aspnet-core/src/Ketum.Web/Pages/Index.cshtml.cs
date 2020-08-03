@@ -1,6 +1,6 @@
-﻿namespace Ketum.Web.Pages
+﻿namespace ketum.Web.Pages
 {
-    public class IndexModel : KetumPageModel
+    public class IndexModel : ketumPageModel
     {
         public void OnGet()
         {

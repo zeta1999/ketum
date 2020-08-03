@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Volo.Abp.DependencyInjection;
 using Volo.Abp.Identity;
 
-namespace Ketum.HttpApi.Client.ConsoleTestApp
+namespace ketum.HttpApi.Client.ConsoleTestApp
 {
     public class ClientDemoService : ITransientDependency
     {

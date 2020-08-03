@@ -1,13 +1,13 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Ketum.Web
+namespace ketum.Web
 {
     public class Startup
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddApplication<KetumWebModule>();
+            services.AddApplication<ketumWebModule>();
         }
 
         public void Configure(IApplicationBuilder app)

@@ -6,24 +6,24 @@ using Volo.Abp.Modularity;
 using Volo.Abp.PermissionManagement;
 using Volo.Abp.TenantManagement;
 
-namespace Ketum
+namespace ketum
 {
     [DependsOn(
-        typeof(KetumApplicationContractsModule),
+        typeof(ketumApplicationContractsModule),
         typeof(AbpAccountHttpApiClientModule),
         typeof(AbpIdentityHttpApiClientModule),
         typeof(AbpPermissionManagementHttpApiClientModule),
         typeof(AbpTenantManagementHttpApiClientModule),
         typeof(AbpFeatureManagementHttpApiClientModule)
     )]
-    public class KetumHttpApiClientModule : AbpModule
+    public class ketumHttpApiClientModule : AbpModule
     {
         public const string RemoteServiceName = "Default";
 
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
             context.Services.AddHttpClientProxies(
-                typeof(KetumApplicationContractsModule).Assembly,
+                typeof(ketumApplicationContractsModule).Assembly,
                 RemoteServiceName
             );
         }

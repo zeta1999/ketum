@@ -4,13 +4,13 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Volo.Abp;
 
-namespace Ketum
+namespace ketum
 {
-    public class KetumWebTestStartup
+    public class ketumWebTestStartup
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddApplication<KetumWebTestModule>();
+            services.AddApplication<ketumWebTestModule>();
         }
 
         public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)

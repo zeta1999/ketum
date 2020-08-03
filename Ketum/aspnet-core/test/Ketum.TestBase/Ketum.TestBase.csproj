@@ -4,14 +4,14 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>Ketum</RootNamespace>
+    <RootNamespace>ketum</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Volo.Abp.TestBase" Version="3.0.5" />
     <PackageReference Include="Volo.Abp.Autofac" Version="3.0.5" />
     <PackageReference Include="Volo.Abp.Authorization" Version="3.0.5" />
-    <ProjectReference Include="..\..\src\Ketum.Domain\Ketum.Domain.csproj" />
+    <ProjectReference Include="..\..\src\ketum.Domain\ketum.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>

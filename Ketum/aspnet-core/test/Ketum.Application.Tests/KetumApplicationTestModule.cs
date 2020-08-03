@@ -1,12 +1,12 @@
 ﻿using Volo.Abp.Modularity;
 
-namespace Ketum
+namespace ketum
 {
     [DependsOn(
-        typeof(KetumApplicationModule),
-        typeof(KetumDomainTestModule)
+        typeof(ketumApplicationModule),
+        typeof(ketumDomainTestModule)
         )]
-    public class KetumApplicationTestModule : AbpModule
+    public class ketumApplicationTestModule : AbpModule
     {
 
     }

@@ -6,10 +6,10 @@ using Volo.Abp.ObjectExtending;
 using Volo.Abp.PermissionManagement;
 using Volo.Abp.TenantManagement;
 
-namespace Ketum
+namespace ketum
 {
     [DependsOn(
-        typeof(KetumDomainSharedModule),
+        typeof(ketumDomainSharedModule),
         typeof(AbpAccountApplicationContractsModule),
         typeof(AbpFeatureManagementApplicationContractsModule),
         typeof(AbpIdentityApplicationContractsModule),
@@ -17,11 +17,11 @@ namespace Ketum
         typeof(AbpTenantManagementApplicationContractsModule),
         typeof(AbpObjectExtendingModule)
     )]
-    public class KetumApplicationContractsModule : AbpModule
+    public class ketumApplicationContractsModule : AbpModule
     {
         public override void PreConfigureServices(ServiceConfigurationContext context)
         {
-            KetumDtoExtensions.Configure();
+            ketumDtoExtensions.Configure();
         }
     }
 }

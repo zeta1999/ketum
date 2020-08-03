@@ -8,15 +8,15 @@ using Volo.Abp.IdentityServer;
 using Volo.Abp.Modularity;
 using Volo.Abp.Threading;
 
-namespace Ketum
+namespace ketum
 {
     [DependsOn(
         typeof(AbpAutofacModule),
         typeof(AbpTestBaseModule),
         typeof(AbpAuthorizationModule),
-        typeof(KetumDomainModule)
+        typeof(ketumDomainModule)
         )]
-    public class KetumTestBaseModule : AbpModule
+    public class ketumTestBaseModule : AbpModule
     {
         public override void PreConfigureServices(ServiceConfigurationContext context)
         {

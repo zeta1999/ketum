@@ -1,12 +1,12 @@
-﻿using Ketum.EntityFrameworkCore;
+﻿using ketum.EntityFrameworkCore;
 using Volo.Abp.Modularity;
 
-namespace Ketum
+namespace ketum
 {
     [DependsOn(
-        typeof(KetumEntityFrameworkCoreTestModule)
+        typeof(ketumEntityFrameworkCoreTestModule)
         )]
-    public class KetumDomainTestModule : AbpModule
+    public class ketumDomainTestModule : AbpModule
     {
 
     }

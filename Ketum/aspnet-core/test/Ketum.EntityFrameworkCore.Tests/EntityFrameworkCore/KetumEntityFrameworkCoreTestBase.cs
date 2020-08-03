@@ -1,8 +1,8 @@
 ﻿using Volo.Abp;
 
-namespace Ketum.EntityFrameworkCore
+namespace ketum.EntityFrameworkCore
 {
-    public abstract class KetumEntityFrameworkCoreTestBase : KetumTestBase<KetumEntityFrameworkCoreTestModule> 
+    public abstract class ketumEntityFrameworkCoreTestBase : ketumTestBase<ketumEntityFrameworkCoreTestModule> 
     {
 
     }

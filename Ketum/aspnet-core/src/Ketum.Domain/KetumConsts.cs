@@ -1,6 +1,6 @@
-﻿namespace Ketum
+﻿namespace ketum
 {
-    public static class KetumConsts
+    public static class ketumConsts
     {
         public const string DbTablePrefix = "App";
 

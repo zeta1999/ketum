@@ -2,15 +2,15 @@
 using Volo.Abp.ObjectExtending;
 using Volo.Abp.Threading;
 
-namespace Ketum.EntityFrameworkCore
+namespace ketum.EntityFrameworkCore
 {
-    public static class KetumEfCoreEntityExtensionMappings
+    public static class ketumEfCoreEntityExtensionMappings
     {
         private static readonly OneTimeRunner OneTimeRunner = new OneTimeRunner();
 
         public static void Configure()
         {
-            KetumModulePropertyConfigurator.Configure();
+            ketumModulePropertyConfigurator.Configure();
             
             OneTimeRunner.Run(() =>
             {
@@ -20,7 +20,7 @@ namespace Ketum.EntityFrameworkCore
                  * The properties defined here becomes table fields.
                  * If you want to use the ExtraProperties dictionary of the entity
                  * instead of creating a new field, then define the property in the
-                 * KetumDomainObjectExtensions class.
+                 * ketumDomainObjectExtensions class.
                  *
                  * Example:
                  *

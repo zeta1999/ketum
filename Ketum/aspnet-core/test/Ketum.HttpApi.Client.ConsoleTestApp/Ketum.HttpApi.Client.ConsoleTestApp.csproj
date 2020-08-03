@@ -18,7 +18,7 @@
 
   <ItemGroup>
     <PackageReference Include="Volo.Abp.Http.Client.IdentityModel" Version="3.0.5" />
-    <ProjectReference Include="..\..\src\Ketum.HttpApi.Client\Ketum.HttpApi.Client.csproj" />
+    <ProjectReference Include="..\..\src\ketum.HttpApi.Client\ketum.HttpApi.Client.csproj" />
   </ItemGroup>
   
   <ItemGroup>

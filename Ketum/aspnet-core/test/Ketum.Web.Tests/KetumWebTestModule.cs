@@ -7,9 +7,9 @@ using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc.ApplicationParts;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
-using Ketum.Localization;
-using Ketum.Web;
-using Ketum.Web.Menus;
+using ketum.Localization;
+using ketum.Web;
+using ketum.Web.Menus;
 using Volo.Abp;
 using Volo.Abp.AspNetCore.TestBase;
 using Volo.Abp.Localization;
@@ -17,20 +17,20 @@ using Volo.Abp.Modularity;
 using Volo.Abp.UI.Navigation;
 using Volo.Abp.Validation.Localization;
 
-namespace Ketum
+namespace ketum
 {
     [DependsOn(
         typeof(AbpAspNetCoreTestBaseModule),
-        typeof(KetumWebModule),
-        typeof(KetumApplicationTestModule)
+        typeof(ketumWebModule),
+        typeof(ketumApplicationTestModule)
     )]
-    public class KetumWebTestModule : AbpModule
+    public class ketumWebTestModule : AbpModule
     {
         public override void PreConfigureServices(ServiceConfigurationContext context)
         {
             context.Services.PreConfigure<IMvcBuilder>(builder =>
             {
-                builder.PartManager.ApplicationParts.Add(new AssemblyPart(typeof(KetumWebModule).Assembly));
+                builder.PartManager.ApplicationParts.Add(new AssemblyPart(typeof(ketumWebModule).Assembly));
             });
         }
 
@@ -53,7 +53,7 @@ namespace Ketum
             services.Configure<AbpLocalizationOptions>(options =>
             {
                 options.Resources
-                    .Get<KetumResource>()
+                    .Get<ketumResource>()
                     .AddBaseTypes(
                         typeof(AbpValidationResource),
                         typeof(AbpUiResource)
@@ -65,7 +65,7 @@ namespace Ketum
         {
             services.Configure<AbpNavigationOptions>(options =>
             {
-                options.MenuContributors.Add(new KetumMenuContributor());
+                options.MenuContributors.Add(new ketumMenuContributor());
             });
         }
 

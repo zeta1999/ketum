@@ -1,8 +1,8 @@
 ﻿using System.Threading.Tasks;
 
-namespace Ketum.Data
+namespace ketum.Data
 {
-    public interface IKetumDbSchemaMigrator
+    public interface IketumDbSchemaMigrator
     {
         Task MigrateAsync();
     }

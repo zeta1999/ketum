@@ -2,9 +2,9 @@
 using Shouldly;
 using Xunit;
 
-namespace Ketum.Pages
+namespace ketum.Pages
 {
-    public class Index_Tests : KetumWebTestBase
+    public class Index_Tests : ketumWebTestBase
     {
         [Fact]
         public async Task Welcome_Page()

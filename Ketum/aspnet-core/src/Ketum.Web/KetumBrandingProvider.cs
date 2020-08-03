@@ -1,11 +1,11 @@
 ﻿using Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.Components;
 using Volo.Abp.DependencyInjection;
 
-namespace Ketum.Web
+namespace ketum.Web
 {
     [Dependency(ReplaceServices = true)]
-    public class KetumBrandingProvider : DefaultBrandingProvider
+    public class ketumBrandingProvider : DefaultBrandingProvider
     {
-        public override string AppName => "Ketum";
+        public override string AppName => "ketum";
     }
 }
